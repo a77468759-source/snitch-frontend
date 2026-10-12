@@ -6,7 +6,7 @@
 2. Start the API from `server` with `npm run dev`.
 3. In a second terminal, start the storefront from `client` with `npm run dev`.
 
-The Vite development server proxies `/api` requests to `http://localhost:3000`. For a separately hosted API, set `VITE_API_URL` to its base URL before building the client. Set `VITE_CONTACT_EMAIL` to show a working email link on the support page.
+The Vite development server proxies `/api` requests to `http://localhost:3000`. For a separately hosted API, set `VITE_API_URL` to its base URL before building the client. The API server must allow the storefront's exact origin in its comma-separated `CLIENT_ORIGINS` setting (for example, `http://localhost:5173` during local development). In production, refresh-token cookies require HTTPS and are configured for cross-site requests. Set `VITE_CONTACT_EMAIL` to show a working email link on the support page.
 
 ## Store features
 
