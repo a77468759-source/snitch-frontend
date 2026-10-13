@@ -1,4 +1,6 @@
-const API_URL = (import.meta.env.VITE_API_URL ?? "").replace(/\/+$/, "")
+const API_URL = (
+  import.meta.env.VITE_API_URL ?? (import.meta.env.DEV ? "" : "https://snitch-backend-1-4ert.onrender.com")
+).replace(/\/+$/, "")
 
 export async function apiRequest(path, { token, ...options } = {}) {
   const headers = new Headers(options.headers)
